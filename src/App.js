@@ -3,13 +3,14 @@ import { sum } from './helpers/calculator'
 import './App.css';
 
 function App() {
-  const [number1, setNumber1] = useState(0);
-  const [number2, setNumber2] = useState(0);
+  const [number1, setNumber1] = useState('');
+  const [number2, setNumber2] = useState('');
+  const [result, setResult] = useState(null)
 
   const submitHandler = e => {
     e.preventDefault();
-    const result = sum(number1, number2);
-    console.log('result: ', result)
+    setResult(sum(number1, number2));
+
   }
 
   return (
@@ -26,6 +27,12 @@ function App() {
         <div>
           <button>somar</button>
         </div>
+
+        {
+          result && (
+            <p>Resultado: {result}</p>
+          )
+        }
       </form>
     </div>
   );
