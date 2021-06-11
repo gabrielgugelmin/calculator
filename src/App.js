@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { sum } from './calculator'
+import { sum } from './helpers/calculator'
 import './App.css';
 
 function App() {
