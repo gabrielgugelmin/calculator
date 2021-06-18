@@ -1,8 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders correctly', () => {
+  const { getByPlaceholderText, getByText } = render(<App />);
+  expect(getByPlaceholderText(/insira o primeiro número/i)).toBeInTheDocument()
+  expect(getByPlaceholderText(/insira o segundo número/i)).toBeInTheDocument()
+  expect(getByText(/somar/i)).toBeInTheDocument()
 });
