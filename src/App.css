@@ -23,9 +23,17 @@ input {
 }
 
 button {
+  background-color: #00a4db;
   border: 0;
   border-radius: 4px;
-  width: 100%;
-  padding: 8px 16px;
+  color: white;
   cursor: pointer;
+  font-weight: 600;
+  padding: 8px 16px;
+  transition: background-color .3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #028cba;
 }
