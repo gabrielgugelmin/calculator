@@ -9,6 +9,6 @@ describe('test sum operation', () => {
 	it('doenst break when one or no parameters are passed', () => {
 		expect(sum(1)).toBe(1);
 		expect(sum()).toBe(0);
-		expect(sum('asdasd', 'asdasd')).toBeNaN()
+		expect(sum('asdasd', 'asdasd')).toBeNaN();
 	});
 })
